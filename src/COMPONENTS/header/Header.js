@@ -14,7 +14,7 @@ const Header = () => {
               </Link>
             </li>
 
-            <li className='bg-neutral-900'>
+            <li>
            <Link to="/">
            <img src= {User} alt = "user" className='max-w-full'/>
            </Link> 

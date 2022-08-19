@@ -12,5 +12,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 .8rem 0 .8rem;
-    width: auto;
+}
+
+.nav_list li {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.nav_list li a {
+    color: white;
+    display: block;
 }
