@@ -1,25 +1,19 @@
+import {Routes, Route} from "react-router-dom"
+import "./App.scss"
+import {Home, Header, MoviesDetail, Footer, Error} from "./COMPONENTS/index"
 
 function App() {
   return (
-    <div className="App bg-slate-900">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">
+      <Header />
 
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    
+      <Routes>
+      <Route path="/" element = {<Home />} />
+      <Route path="/movies:Id" element = {<MoviesDetail />} />
+      <Route path = "/*" element = {<Error />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }
