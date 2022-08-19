@@ -1,0 +1,16 @@
+@import "../../CONSTS/colors.scss";
+
+.logo-header {
+    display : block;
+    width: 100%;
+    font-family: $custom_font;
+    background-color: $secondary_color;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .8rem 0 .8rem;
+    width: auto;
+}
