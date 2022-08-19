@@ -1,0 +1,7 @@
+export {default as Home } from "../COMPONENTS/home/Home"
+export {default as Error } from "../COMPONENTS/404/Error"
+export {default as Footer } from "../COMPONENTS/footer/Footer"
+export {default as Header } from "../COMPONENTS/header/Header"
+export {default as MoviesArray } from "../COMPONENTS/moviesArray/MoviesArray"
+export {default as MoviesCard } from "../COMPONENTS/moviesCard/MoviesCard"
+export {default as moviesDetail } from "../COMPONENTS/moviesDetail/MoviesDetail"
