@@ -15,7 +15,7 @@ const Header = () => {
             </li>
 
             <li>
-           <Link to="/">
+           <Link to="/" className='text-white block relative'>
            <img src= {User} alt = "user" className='max-w-full'/>
            </Link> 
             </li>

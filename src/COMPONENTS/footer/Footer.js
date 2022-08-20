@@ -1,8 +1,10 @@
 import React from 'react'
-
+import "./Footer.scss"
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer className = "footer">
+      <p>Movie app for usage / learning of Redux toolkits</p>
+    </footer>
   )
 }
 

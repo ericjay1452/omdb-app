@@ -1,0 +1,15 @@
+@import "../../CONSTS/colors.scss";
+
+.footer {
+    background-color: $secondary_color;
+    text-align: center;
+    color: white;
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
