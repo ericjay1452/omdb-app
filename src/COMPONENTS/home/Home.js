@@ -2,7 +2,12 @@ import React, { useEffect } from 'react'
 import MoviesArray from '../moviesArray/MoviesArray'
 import MovieApi from "../../UTILS/api/MovieApi"
 import {Api_key} from "../../UTILS/api/Apikey"
+import { useDispatch } from 'react-redux'
+import { addMovies } from '../../features/movies/moviesSlice'
+
 const Home = () => {
+
+  const dispatch = useDispatch();
 
   useEffect( () =>{
    const ApiFetched = async () => {
@@ -12,7 +17,7 @@ const Home = () => {
         console.log(`Err  :  ${err}`)
       }
     )
-    console.log(fetchedData)
+     dispatch(addMovies(fetchedData))
    }
 
    ApiFetched()
