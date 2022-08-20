@@ -17,7 +17,8 @@ const Home = () => {
         console.log(`Err  :  ${err}`)
       }
     )
-     dispatch(addMovies(fetchedData))
+     dispatch(addMovies(fetchedData.data))
+     console.log(fetchedData)
    }
 
    ApiFetched()
