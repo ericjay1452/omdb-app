@@ -18,9 +18,7 @@ const Home = () => {
       }
     )
      dispatch(addMovies(fetchedData.data))
-     console.log(fetchedData)
    }
-
    ApiFetched()
   }, [])
   return (
