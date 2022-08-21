@@ -25,7 +25,7 @@ const MoviesArray = () => {
   return (
     <>
     <div className='block w-full relative'>
-      <div className='block m-auto mt-2 mb-2 w-11/12 relative bg-neutral-900'>
+      <div className='block m-auto mt-2 mb-2 w-11/12 relative bg-neutral-900 rounded text-white'>
       <div className='container-grid'>
        {RenderMovies}
       </div>

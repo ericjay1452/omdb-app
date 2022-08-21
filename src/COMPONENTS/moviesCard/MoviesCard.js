@@ -1,9 +1,11 @@
 import React from 'react'
 
 const MoviesCard = ({data}) => {
-  console.log(data)
+  const {Poster, Title, Year, Type, imdbID : Id} = data
   return (
-    <div>MoviesCard</div>
+    <div className='block relative w-full'>
+
+    </div>
   )
 }
 
