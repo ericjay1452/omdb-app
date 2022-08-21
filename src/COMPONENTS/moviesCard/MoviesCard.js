@@ -1,6 +1,7 @@
 import React from 'react'
 
-const MoviesCard = () => {
+const MoviesCard = ({data}) => {
+  console.log(data)
   return (
     <div>MoviesCard</div>
   )

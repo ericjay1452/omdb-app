@@ -20,9 +20,12 @@ const Home = () => {
      dispatch(addMovies(fetchedData.data))
    }
    ApiFetched()
+
+   console.log(ApiFetched())
   }, [])
   return (
     <div>
+
       <div className = "banner-image"></div>
       <MoviesArray />
     </div>
