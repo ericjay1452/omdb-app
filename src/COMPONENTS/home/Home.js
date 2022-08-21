@@ -24,6 +24,7 @@ const Home = () => {
    console.log(ApiFetched())
   }, [])
   return (
+    
     <div>
 
       <div className = "banner-image"></div>

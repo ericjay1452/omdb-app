@@ -11,7 +11,7 @@ const MoviesArray = () => {
   RenderMovies = AllMovies.Response === "True" ? (
     AllMovies?.Search?.map( (movie, index) =>{
        return (
-        <MoviesCard key={index} data = {AllMovies}/>
+        <MoviesCard key={index} data = {movie}/>
        )
     })
   ) : (
@@ -25,8 +25,8 @@ const MoviesArray = () => {
   return (
     <>
     <div className='block w-full relative'>
-      <div className='block m-auto mt-2 mb-2 w-11/12 relative bg-neutral-900 rounded text-white'>
-      <div className='container-grid'>
+      <div className='block m-auto mb-2 w-11/12 relative bg-neutral-300 rounded'>
+      <div className='container-grid mt-7'>
        {RenderMovies}
       </div>
      </div>
