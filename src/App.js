@@ -4,7 +4,7 @@ import {Home, Header, MoviesDetail, Footer, Error} from "./COMPONENTS/index"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-neutral-300">
       <Header />
 
       <Routes>
