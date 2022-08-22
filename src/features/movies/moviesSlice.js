@@ -3,6 +3,7 @@ import MovieApi from "../../UTILS/api/MovieApi"
 import {Api_key} from "../../UTILS/api/Apikey"
 
 
+// For fetching api movies
 export const fetchedMoviesAsync = createAsyncThunk("movies/fetchedApi", async () => {
         const fetchedData = await MovieApi.get
         (`?apikey=${Api_key}&s=Harry&type=movie`).catch(
@@ -13,7 +14,7 @@ export const fetchedMoviesAsync = createAsyncThunk("movies/fetchedApi", async ()
          return fetchedData.data
 })
 
-// for Series Api fetching
+// for fetching api series
 export const fetchedSeriessAsync = createAsyncThunk("series/fetchedApi", async () => {
     const fetchedData = await MovieApi.get
     (`?apikey=${Api_key}&s=Friends&type=series`).catch(
@@ -24,9 +25,21 @@ export const fetchedSeriessAsync = createAsyncThunk("series/fetchedApi", async (
      return fetchedData.data
 })
 
+// for fetching Selected series or Movies id selected
+export const fetchedSeriesOrMoviesAsync = createAsyncThunk("movies/fetchedApi", async (Id) => {
+    const fetchedData = await MovieApi.get
+    (`?apikey=${Api_key}&i=${Id}&plot=full`).catch(
+      (err) => {
+        console.log(`Err  :  ${err}`)
+      }
+    )
+     return fetchedData.data
+})
+
 const initialState = {
     movies : {},
-    shows : {}
+    shows : {},
+    selectedId : {}
 }
 
 const moviesSlice = createSlice({
@@ -51,13 +64,19 @@ const moviesSlice = createSlice({
             return {...state, shows : payload}
         },
 
+        [fetchedSeriesOrMoviesAsync.fulfilled] : (state, {payload}) =>{
+            return {...state, selectedId : payload}
+        },
+
         [fetchedMoviesAsync.rejected] : () =>{}
     }
 })
 
 export const {addMovies} = moviesSlice.actions;
 
+// 
 export const getAllMovies = (state) => state.movies.movies
 export const getAllSeries = (state) => state.movies.shows
+export const getParticularId = (state) => state.movies.selectedId
 
 export default moviesSlice.reducer
