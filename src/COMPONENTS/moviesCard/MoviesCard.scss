@@ -4,6 +4,7 @@
 .card:hover {
     background-color: rgba(248, 250, 252, 0.911);
     box-shadow: -6px 5px 4px 3px rgb(181 181 181);
+    transform: scale(1.1);
     transition: all .3s ease-in;
 
     .movie-card-info {
