@@ -1,12 +1,13 @@
 @import "../../CONSTS/colors.scss";
 
-.movie-card-info {
-    font-family: $custom_font;
-}
 
 .card:hover {
     background-color: rgba(248, 250, 252, 0.911);
     box-shadow: -6px 5px 4px 3px rgb(181 181 181);
     transition: all .3s ease-in;
+
+    .movie-card-info {
+        font-family: $custom_font;
+    }
 }
 

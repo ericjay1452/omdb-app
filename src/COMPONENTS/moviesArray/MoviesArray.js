@@ -27,9 +27,9 @@ const MoviesArray = () => {
   // For getting all series
 
   const AllSeries = useSelector(getAllSeries);
-  let RenderSeies = ""
+  let RenderSeries = ""
 
-  RenderSeies = AllSeries.Response === "True" ? (
+  RenderSeries = AllSeries.Response === "True" ? (
     AllSeries?.Search?.map( (movie, index) =>{
        return (
         <MoviesCard key={index} data = {movie}/>
@@ -38,7 +38,7 @@ const MoviesArray = () => {
   ) : (
     <div className = "Error">
     <h2>
-     {RenderSeies.Error}
+     {RenderSeries.Error}
     </h2>
     </div> 
     
@@ -59,7 +59,7 @@ const MoviesArray = () => {
       <h3>Series</h3>
       <div className='block m-auto mb-2 w-11/12 relative bg-neutral-300 rounded'>
       <div className='container-grid mt-7'>
-       {RenderMovies}
+       {RenderSeries}
       </div>
      </div>
     </div>

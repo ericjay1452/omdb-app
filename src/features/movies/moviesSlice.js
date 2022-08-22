@@ -16,7 +16,7 @@ export const fetchedMoviesAsync = createAsyncThunk("movies/fetchedApi", async ()
 // for Series Api fetching
 export const fetchedSeriessAsync = createAsyncThunk("series/fetchedApi", async () => {
     const fetchedData = await MovieApi.get
-    (`?apikey=${Api_key}&s=Originals&type=series`).catch(
+    (`?apikey=${Api_key}&s=Friends&type=series`).catch(
       (err) => {
         console.log(`Err  :  ${err}`)
       }
