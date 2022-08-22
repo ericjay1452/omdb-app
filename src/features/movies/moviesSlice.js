@@ -13,8 +13,20 @@ export const fetchedMoviesAsync = createAsyncThunk("movies/fetchedApi", async ()
          return fetchedData.data
 })
 
+// for Series Api fetching
+export const fetchedSeriessAsync = createAsyncThunk("series/fetchedApi", async () => {
+    const fetchedData = await MovieApi.get
+    (`?apikey=${Api_key}&s=Originals&type=series`).catch(
+      (err) => {
+        console.log(`Err  :  ${err}`)
+      }
+    )
+     return fetchedData.data
+})
+
 const initialState = {
     movies : {},
+    shows : {}
 }
 
 const moviesSlice = createSlice({
@@ -34,10 +46,18 @@ const moviesSlice = createSlice({
             return {...state, movies : payload}
         },
 
+
+        [fetchedSeriessAsync.fulfilled] : (state, {payload}) =>{
+            return {...state, shows : payload}
+        },
+
         [fetchedMoviesAsync.rejected] : () =>{}
     }
 })
 
 export const {addMovies} = moviesSlice.actions;
+
 export const getAllMovies = (state) => state.movies.movies
+export const getAllSeries = (state) => state.movies.shows
+
 export default moviesSlice.reducer
